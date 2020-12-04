@@ -8,7 +8,7 @@ namespace FindNumberInStringStream
     {
         static void Main(string[] args)
         {
-            Dictionary<int, string> d = new Dictionary<int, string>();
+            Dictionary<int, string> numberGroups = new Dictionary<int, string>();
             int ctr = 1;
 
             string s = string.Empty;
@@ -23,16 +23,16 @@ namespace FindNumberInStringStream
                 else if (i != -100)
                 {
                     s += i;
-                    if (d.TryGetValue(ctr, out string r))
+                    if (numberGroups.TryGetValue(ctr, out string r))
                     {
-                        d[ctr] = s;
+                        numberGroups[ctr] = s;
                     }
                     else
-                        d.Add(ctr, s);
+                        numberGroups.Add(ctr, s);
                 }
 
             }
-            d.Values.ToList().ForEach(o => Console.WriteLine(o));
+            numberGroups.Values.ToList().ForEach(o => Console.WriteLine(o));
             Console.ReadLine();
         }
 
