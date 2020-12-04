@@ -1,2 +1,2 @@
 # FindNumberInStringStream
-A way to extract numbers from string stream (without regex)
+A program to extract numbers (+ve and -ve) from string stream (without regex)
